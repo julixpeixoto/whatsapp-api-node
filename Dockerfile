@@ -20,7 +20,7 @@ ENV PUPPETEER_EXECUTABLE_PATH=/chrome-linux/chrome
 COPY package*.json ./
 
 # Install the dependencies
-RUN npm ci --only=production --ignore-scripts
+RUN npm install --only=production
 
 # Copy the rest of the source code to the working directory
 COPY . .
